@@ -36,6 +36,7 @@ namespace PizzaPromos
             services.AddControllers(options =>
             {
                 options.Filters.Add(new ValidationFilter());
+                options.Filters.Add(new ApiExceptionFilter());
             });
             
             services.AddMvc().AddFluentValidation();
